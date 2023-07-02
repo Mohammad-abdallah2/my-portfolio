@@ -25,121 +25,6 @@ session_start();
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
-	<style>
-		.modal {
-			display: none;
-			/* Hidden by default */
-			position: fixed;
-			/* Stay in place */
-			z-index: 9999;
-			/* Sit on top */
-			padding-top: 100px;
-			/* Location of the box */
-			left: 0;
-			top: 0;
-			width: 100%;
-			/* Full width */
-			height: 100%;
-			/* Full height */
-			overflow: auto;
-			/* Enable scroll if needed */
-			background-color: rgb(0, 0, 0);
-			/* Fallback color */
-			background-color: rgba(0, 0, 0, 0.4);
-			/* Black w/ opacity */
-		}
-
-		/* Modal Content */
-		.modal-content {
-			background-color: #fefefe;
-			margin: auto;
-			margin-top: 90px;
-			padding: 20px;
-			border: 1px solid #888;
-			width: 50%;
-		}
-
-		/* The Close Button */
-		.close {
-			color: #aaaaaa;
-			float: right;
-			font-size: 28px;
-			font-weight: bold;
-		}
-
-		.close:hover,
-		.close:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-		.home_banner_area {
-			z-index: 1 !important;
-			background: url() no-repeat !important;
-			background-position: center !important;
-			background-size: cover !important;
-		}
-
-		.single-brand-item img:hover {
-			border: 1px solid transparent !important;
-			box-shadow: 0px 8px 30px rgba(0, 0, 0, 0) !important;
-		}
-
-		@media (max-width: 500px) {
-			.home_right_img {
-				display: block !important;
-				padding-top: 75px !important;
-			}
-
-			img {
-				max-width: 75% !important;
-				height: auto !important;
-			}
-
-		}
-
-		.header_area .navbar .nav .nav-item .nav-link {
-			line-height: 40px;
-			margin-right: 0px;
-			display: block;
-			border-bottom: 1px solid #ededed33;
-			border-radius: 0px;
-			color: #fff;
-		}
-
-
-		input[type=text],
-		input[type=email],
-		textarea {
-			width: 100%;
-			padding: 12px;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			box-sizing: border-box;
-			margin-top: 6px;
-			margin-bottom: 16px;
-			resize: vertical;
-		}
-
-		.containerx {
-			border-radius: 5px;
-			background-color: #f2f2f2;
-			padding: 20px;
-		}
-
-		.form-error {
-			color: red;
-		}
-
-		.form-success {
-			color: green;
-		}
-
-		.input-error {
-			box-shadow: 0 0 5px red;
-		}
-	</style>
 </head>
 
 <body>
@@ -490,61 +375,61 @@ session_start();
 	<!--================End Portfolio Area =================-->
 
 	<!--================ Start Testimonial Area =================-->
-	<div class="testimonial_area section_gap_bottom">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>client say about me</h2>
-						<p>Some comments and opinions of customers on the work that has been done.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="testi_slider owl-carousel">
-					<?php
-					$sql = "SELECT * FROM client";
-					$result = mysqli_query($conn, $sql);
-					if (mysqli_num_rows($result) > 0) {
-						while ($row = mysqli_fetch_assoc($result)) {
-							$name = $row['name'];
-							$description = $row['description'];
-
-					?>
-							<div class="testi_item">
-								<div class="row">
-									<div class="col-lg-4">
-										<img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt="">
-									</div>
-									<div class="col-lg-8">
-										<div class="testi_text">
-											<h4><?php echo $name; ?></h4>
-											<p><?php echo $description; ?></p>
-										</div>
-									</div>
-								</div>
-							</div>
-					<?php }
-					} else {
-						echo '	        			
-						<div class="testi_item">
-        					<div class="row">
-        						<div class="col-lg-8">
-        							<div class="testi_text">
-        								<h4>There are no feedback yet</h4>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-							
-			';
-					}
-					?>
-
-				</div>
-			</div>
-		</div>
-	</div>
+<!--	<div class="testimonial_area section_gap_bottom">-->
+<!--		<div class="container">-->
+<!--			<div class="row justify-content-center">-->
+<!--				<div class="col-lg-8 text-center">-->
+<!--					<div class="main_title">-->
+<!--						<h2>client say about me</h2>-->
+<!--						<p>Some comments and opinions of customers on the work that has been done.</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="row">-->
+<!--				<div class="testi_slider owl-carousel">-->
+<!--					--><?php
+//					$sql = "SELECT * FROM client";
+//					$result = mysqli_query($conn, $sql);
+//					if (mysqli_num_rows($result) > 0) {
+//						while ($row = mysqli_fetch_assoc($result)) {
+//							$name = $row['name'];
+//							$description = $row['description'];
+//
+//					?>
+<!--							<div class="testi_item">-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-4">-->
+<!--										<img src="data:image/jpg;charset=utf8;base64,--><?php //echo base64_encode($row['image']); ?><!--" alt="">-->
+<!--									</div>-->
+<!--									<div class="col-lg-8">-->
+<!--										<div class="testi_text">-->
+<!--											<h4>--><?php //echo $name; ?><!--</h4>-->
+<!--											<p>--><?php //echo $description; ?><!--</p>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--					--><?php //}
+//					} else {
+//						echo '
+//						<div class="testi_item">
+//        					<div class="row">
+//        						<div class="col-lg-8">
+//        							<div class="testi_text">
+//        								<h4>There are no feedback yet</h4>
+//        						</div>
+//        					</div>
+//        				</div>
+//        			</div>
+//
+//			';
+//					}
+//					?>
+<!---->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
 	<!--================ End Testimonial Area =================-->
 	<!-- =============== start send message to me =================== -->
 
@@ -561,17 +446,17 @@ session_start();
 
 			<div class="containerx">
 				<form action="send_email.php">
-					<label for="fname">Name <span style="color: red;">*</span></label>
+					<label for="fname">Name <span>*</span></label>
 					<input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-					<label for="email">Email <span style="color: red;">*</span></label>
+					<label for="email">Email <span>*</span></label>
 					<input type="email" id="email" name="email" placeholder="Your last name..">
 
-					<label for="subject">Subject <span style="color: red;">*</span></label>
-					<input type="text" id="subject" name="subject" placeholder="Write something.." style="height:60px">
+					<label for="subject">Subject <span>*</span></label>
+					<input type="text" id="subject" name="subject" placeholder="Write something..">
 
-					<label for="message">The message <span style="color: red;">*</span></label>
-					<textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+					<label for="message">The message <span>*</span></label>
+					<textarea id="message" name="message" placeholder="Write something.."></textarea>
 					<p class="form-message"></p>
 					<input type="submit" class="primary_btn" value="Submit" id="mail-submit" name="submit">
 				</form>
@@ -700,9 +585,6 @@ session_start();
 			});
 		};
 	</script>
-
-
-
 </body>
 
 </html>
