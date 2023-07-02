@@ -41,7 +41,7 @@
                           <?php echo $row['id']; ?>
                           </td>
                           <td>
-                          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['icon']); ?>" width="100px" height="100px" alt="#"/>
+                          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['icon']); ?>" width="500px" height="auto" alt="#"/>
                           </td>
                           <td>
                             <form action="edit_header_section.php" method="post" style="display: inline">

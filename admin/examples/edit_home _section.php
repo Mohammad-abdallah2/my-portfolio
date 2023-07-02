@@ -35,19 +35,19 @@ if (isset($_POST['id'])){
                 <div class="card-body">
 <form action="" method="POST" enctype="multipart/form-data">
     <label>Name</label>
-    <input autocomplete="off" type="text" class="form-control" name="name" value="<?php echo $_SESSION['name']; ?>" >
+    <input autocomplete="off" type="text" class="form-control" name="name" value="<?php echo $_SESSION['name']; ?>">
     <label>Jop</label>
-    <input autocomplete="off" type="text" class="form-control" name="jop" value="<?php echo $_SESSION['jop']; ?>" >
+    <input autocomplete="off" type="text" class="form-control" name="jop" value="<?php echo $_SESSION['jop']; ?>">
     <label>Email</label>
-    <input autocomplete="off" type="email" class="form-control" name="email" value="<?php echo $_SESSION['email']; ?>" >
+    <input autocomplete="off" type="text" class="form-control" name="email" value="<?php echo $_SESSION['email']; ?>">
     <label>Phone</label>
-    <input autocomplete="off" type="text" class="form-control" name="phone" value="<?php echo $_SESSION['phone']; ?>" >
+    <input autocomplete="off" type="text" class="form-control" name="phone" value="<?php echo $_SESSION['phone']; ?>">
     <label>Picture</label><br>
     <img src="data:image/jpg;charset=utf8;base64,<?php echo $_SESSION['image']; ?>" width="100px" height="100px" alt="#"/>
     <input name="image" type="file" class="form-control">
     <div class="mt-5">
         <button type="submit" name="edit_slide" value="save" class="btn btn-primary">Save changes</button>
-        <a href="home _section.php" class="btn btn-danger">Cancel</a>
+        <a href="index.php" class="btn btn-danger">Cancel</a>
     </div>
     
   

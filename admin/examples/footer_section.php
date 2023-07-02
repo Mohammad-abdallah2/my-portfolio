@@ -59,7 +59,7 @@
                           <li><a href="<?php echo $row['url3']; ?>"  target=_blanck>Instagram</a></li>
                           </td>
                           <td>
-                          <li><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['icon']); ?>" width="100px" height="100px" alt="#"/></li>
+                          <li><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['icon']); ?>" width="500px" height="auto" alt="#"/></li>
                           </td>
                           <td>
                             <form action="edit_footer_section.php" method="post" style="display: inline">
