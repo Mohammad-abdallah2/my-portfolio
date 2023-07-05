@@ -71,7 +71,7 @@
  						<div class="col-lg-4 col-md-6 all">
  							<div class="portfolio_box">
  								<div class="single_portfolio">
- 									<img class="img-fluid w-100" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt="">
+ 									<img class="img-fluid mw-100" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" alt="">
  									<div class="overlay"></div>
  									<a href="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" class="img-gal">
  										<div class="icon">

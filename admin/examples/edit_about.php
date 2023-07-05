@@ -61,7 +61,6 @@ if (isset($_POST['id'])) {
         </div>
     </div>
 
-
 <?php
 
 if (isset($_POST['edit_about'])) {
@@ -80,7 +79,7 @@ if (isset($_POST['edit_about'])) {
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
 
-    $allowed = array('pdf');
+    $allowed = array('pdf', 'docx');
 
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0) {
@@ -101,25 +100,18 @@ if (isset($_POST['edit_about'])) {
 
 
             } else {
-                echo '<p style="position: absolute; top: 110px; margin-left: 680px; font-size: 30px; color: red;">';
-                echo '
-    ملفك كبير جدًا';
-                echo '</p>';
+                echo "<script> alert('the file is too large.') </script>";
             }
 
         } else {
-            echo '<p style="position: absolute; top: 110px; margin-left: 680px; font-size: 30px; color: red;">';
-            echo '
-    كان هناك خطأ في تحميل الملف الخاص بك';
-            echo '</p>';
+            echo "<script> alert('There is error in upload.') </script>";
         }
 
     } else {
       echo '<script> alert("the file not upload") </script>';
     }
-
-
 }
+
 ?>
 
 
