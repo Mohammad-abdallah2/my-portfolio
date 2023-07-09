@@ -7,10 +7,7 @@
 </head>
 
 <body>
-    <p style="  align-items: center;
-    font-size: 30px;
-    margin-left: 700px;
-    margin-top: 50px;">Log in</p>
+    <p>Log in</p>
     <form>
         <input id="mail-name" type="text" name="fullname" placeholder="Full name">
         </br>
