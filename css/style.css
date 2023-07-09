@@ -1314,11 +1314,11 @@ textarea {
   height:200px
 }
 
-.form-error {
+.containerx .form-error {
   color: red;
 }
 
-.form-success {
+.containerx .form-success {
   color: green;
 }
 
@@ -3193,7 +3193,7 @@ h6 {
 
   .home_banner_area .banner_inner {
     min-height: 300px;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 50px; }
 
   .home_banner_area .banner_inner .banner_content {
