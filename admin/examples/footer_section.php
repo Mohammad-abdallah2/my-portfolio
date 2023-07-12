@@ -37,6 +37,9 @@ include "header.php";
                                 Instagram
                             </th>
                             <th>
+                                Github
+                            </th>
+                            <th>
                                 Frontend mentor
                             </th>
                             <th>
@@ -60,6 +63,9 @@ include "header.php";
                                     </td>
                                     <td>
                                         <li><a href="<?php echo $row['url3']; ?>" target=_blanck>Instagram</a></li>
+                                    </td>
+                                    <td>
+                                        <li><a href="<?php echo $row['url4']; ?>" target=_blanck>Github</a></li>
                                     </td>
                                     <td>
                                         <li><a href="<?php echo $row['url5']; ?>" target=_blanck>Frontend mentor</a></li>
