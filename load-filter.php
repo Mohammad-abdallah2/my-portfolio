@@ -80,7 +80,7 @@
  									</a>
  								</div>
  								<div class="short_info">
- 									<h4><a href="portfolio-details.html"><?php echo $title; ?></a></h4>
+ 									<h4><?php echo $title; ?></h4>
  									<p><?php echo $sub_title; ?></p>
  								</div>
  							</div>

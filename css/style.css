@@ -3389,6 +3389,9 @@ h6 {
       margin-top: 35px;
       text-transform: uppercase; }
   .footer_area .footer_social {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     text-align: center;
     margin: 25px 0px 30px; }
     .footer_area .footer_social a {

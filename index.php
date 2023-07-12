@@ -359,7 +359,7 @@ session_start();
 										</a>
 									</div>
 									<div class="short_info">
-										<h4><a href="portfolio-details.html"><?php echo $title; ?></a></h4>
+										<h4><?php echo $title; ?></h4>
 										<p><?php echo $sub_title; ?></p>
 									</div>
 								</div>
@@ -494,6 +494,7 @@ session_start();
 			$url1 = $row['url1'];
 			$url2 = $row['url2'];
 			$url3 = $row['url3'];
+            $url5 = $row['url5'];
 	?>
 			<footer class="footer_area" id="Contact">
 				<div class="container">
@@ -513,7 +514,8 @@ session_start();
 									<a href="<?php echo $url1; ?>" target=_blanck><i class="fa fa-facebook"></i></a>
 									<a href="<?php echo $url2; ?>" target=_blanck><i class="fa fa-linkedin"></i></a>
 									<a href="<?php echo $url3; ?>" target=_blanck><i class="fa fa-instagram"></i></a>
-								</div>
+                                    <a href="<?php echo $url5; ?>" target=_blanck><img src="img/frontend.png" alt="Frontend mentor icon" width="30px" height="auto"></a>
+                                </div>
 							</div>
 						</div>
 					</div>

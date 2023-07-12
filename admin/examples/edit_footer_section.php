@@ -14,6 +14,7 @@ if (isset($_POST['edit_btn'])){
         $_SESSION['Facebook'] = $row['url1'];
         $_SESSION['Linkedin'] = $row['url2'];
         $_SESSION['Instagram'] = $row['url3'];
+        $_SESSION['Frontend'] = $row['url5'];
         $_SESSION['icon'] =  base64_encode($row['icon']);
      
   }}?>
@@ -35,8 +36,10 @@ if (isset($_POST['edit_btn'])){
     <input autocomplete="off"  type="text" class="form-control" name="url2" value="<?php echo $_SESSION['Linkedin']; ?>">
     <label>URL Instagram</label>
     <input autocomplete="off"  type="text" class="form-control" name="url3" value="<?php echo $_SESSION['Instagram']; ?>">
+    <label>URL Frontend mentor</label>
+    <input autocomplete="off"  type="text" class="form-control" name="url5" value="<?php echo $_SESSION['Frontend']; ?>">
     <label>Icon</label><br>
-    <img src="data:image/jpg;charset=utf8;base64,<?php echo $_SESSION['icon']; ?>" width="100px" height="100px" alt="#"/>
+    <img src="data:image/jpg;charset=utf8;base64,<?php echo $_SESSION['icon']; ?>" width="350px" height="100px" alt="#"/>
     <input name="image" type="file" class="form-control">
     <div class="mt-5">
         <button type="submit" name="edit_footer" value="save" class="btn btn-primary">Save changes</button>
@@ -78,11 +81,11 @@ if (isset($_POST['edit_footer'])){
                 $url1 = $_POST['url1'];
                 $url2 = $_POST['url2'];
                 $url3 = $_POST['url3'];
-            
+                $url5 = $_POST['url5'];
         
                 $img_id = $_SESSION['id'];
                 //Now run update query
-                $query = $conn->query("UPDATE footer SET url1 = '$url1', url2 = '$url2', url3= '$url3', icon='$img_content'  WHERE id = $img_id");
+                $query = $conn->query("UPDATE footer SET url1 = '$url1', url2 = '$url2', url3= '$url3', url5= '$url5', icon='$img_content'  WHERE id = $img_id");
                 echo "<script> alert('Social media edited.') </script>";
                  //check if successfully inserted
                 if($query){ 
